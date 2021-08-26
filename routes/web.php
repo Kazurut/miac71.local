@@ -45,13 +45,28 @@ Route::get('/admin/tables/{table_name}/{id}/delete', [TablesController::class, '
 // Testing route
 Route::get('/admin/testing', [TestingController::class, 'get_all_test_list'])->middleware('auth');
 Route::get('/admin/testing/graphic', [TestingController::class, 'get_all_test_list_graphic'])->middleware('auth');
-Route::get('/admin/testing/graphic/{graphic_id}', [TestingController::class, 'single_graphic'])->middleware('auth');
+Route::get('/admin/testing/graphic/{graphic_id}/employee={employee_id}', [TestingController::class, 'single_graphic'])->middleware('auth');
+Route::get('/admin/testing/graphic/{graphic_id}/employee={employee_id}/startDate={startDate}', [TestingController::class, 'single_graphic'])->middleware('auth');
+Route::get('/admin/testing/graphic/{graphic_id}/employee={employee_id}/endDate={endDate}', [TestingController::class, 'single_graphic'])->middleware('auth');
+Route::get('/admin/testing/graphic/{graphic_id}/employee={employee_id}/startDate={startDate}/endDate={endDate}', [TestingController::class, 'single_graphic'])->middleware('auth');
 Route::get('/admin/testing/{test_id}', [TestingController::class, 'single_test'])->name('current_test')->middleware('auth');
 Route::post('/admin/testing/{test_id}/preResult/store', [TestingController::class, 'single_test_store'])->middleware('auth');
 
 
+//Route::get('/admin/testing/graphic/{graphic_id}/employee={employee_id}&from={from}', [TestingController::class, 'single_graphic'])->middleware('auth');
+/*
+Route::name('/admin/testing/graphic/{graphic_id}/')->group(function () {
+    Route::get('employee={employee_id}', function () {
+        return [TestingController::class, 'single_graphic'];
+    })->middleware('auth');
+});*/
+
 //Route::resource('/admin/tables/{table_name}', TablesControllerCRUD::class);
 //Route::get('/admin/tables/{table_name}/create', [TablesController::class, 'single_table_add']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 

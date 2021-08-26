@@ -10,21 +10,30 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "@babel/preset-react": "^7.13.13",
         "axios": "^0.21",
-        "bootstrap": "^4.0.0",
+        "bootstrap": "^4.6.0",
         "cross-env": "7.0.3",
-        "jquery": "^3.2",
-        "laravel-mix": "^6.0.6",
+        "jquery": "^3.6",
+        "laravel-mix": "^6.0.27",
         "lodash": "^4.17.19",
-        "popper.js": "^1.12",
-        "postcss": "^8.1.14",
+        "popper.js": "^1.16.1",
+        "postcss": "^8.3.6",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
         "resolve-url-loader": "^2.3.1",
-        "sass": "^1.20.1",
-        "sass-loader": "^8.0.0",
-        "vue": "^2.5.17",
-        "vue-template-compiler": "^2.6.10"
+        "sass": "^1.32.11",
+        "sass-loader": "^11.0.1"
     },
     "dependencies": {
-        "admin-lte": "^3.1.0"
+        "@chenfengyuan/datepicker": "^1.0.10",
+        "admin-lte": "^3.1.0",
+        "mdbootstrap": "^4.20.0",
+        "react-date-picker": "^8.2.0",
+        "react-datepicker": "^4.2.0",
+        "react-router-dom": "^5.2.0",
+        "sweetalert2": "^11.0.20",
+        "vue2-datepicker": "^3.9.2",
+        "vuejs-datepicker": "^1.6.2"
     }
 }

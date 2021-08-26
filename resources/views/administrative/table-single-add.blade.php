@@ -3,7 +3,7 @@
 @section('title', $table_name)
 
 @section('content_header')
-    <h1>Table name: {{ $table_name }}</h1>
+    <h1>Таблица: {{ $table_name }}</h1>
 @stop
 
 @section('content')
@@ -49,8 +49,8 @@
         </table>
         <br>
 
-        <button type="submit" name="submit" value="create" class="btn btn-primary">Add</button>
-        <a class="btn btn-secondary" href="/admin/tables/{{$table_name}}">Back</a>
+        <button type="submit" name="submit" value="create" class="btn btn-primary">Добавить</button>
+        <a class="btn btn-secondary" href="/admin/tables/{{$table_name}}">Назад</a>
     </form>
 @stop
 

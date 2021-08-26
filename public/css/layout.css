@@ -1,0 +1,19 @@
+.content-wrapper {
+    padding-bottom: 50px;
+}
+.button-navigation{
+    padding-top: 30px;
+}
+.button-navigation [class*="col-"]{
+    background: transparent;
+    border: none;
+}
+.row.button-navigation .btn.btn-primary{
+    margin-right: 10px;
+}
+body.swal2-shown > [aria-hidden="true"] {
+    filter: blur(10px);
+}
+body > * {
+    transition: 0.1s filter linear;
+}

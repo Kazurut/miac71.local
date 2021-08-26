@@ -33,7 +33,7 @@
                         if($element_name == 'id'){
                             echo '<div class="row">
                                     <div class="col-2">'.$element_name.':</div>
-                                    <div class="col-10 disable"><input type="text" placeholder="id" value="'.$element_value.'" disable></div>
+                                    <div class="col-10 disable"><input type="text" placeholder="id" value="'.$element_value.'" disabled></div>
                                   </div>';
                         }else{
                             if(($element_name == 'created_at') || ($element_name == 'updated_at') || ($element_name == 'failed_at')){
@@ -64,10 +64,11 @@
                 }
                 echo $last_col;
             @endphp
-        <br>
         <input type="hidden" name="id" value="{{ $id }}">
-        <button type="submit" name="submit" value="update" class="btn btn-primary">Update</button>
-        <a class="btn btn-secondary" href="/admin/tables/{{$table_name}}">Back</a>
+        <div class="row button-navigation">
+            <button type="submit" name="submit" value="update" class="btn btn-primary">Обновить</button>
+            <a class="btn btn-secondary" href="/admin/tables/{{$table_name}}">Назад</a>
+        </div>
     </form>
 @stop
 

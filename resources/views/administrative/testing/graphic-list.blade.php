@@ -1,15 +1,15 @@
 @extends('adminlte::page')
 
-@section('title', 'List of tests')
+@section('title', 'Список тестов')
 
 @section('content_header')
-    <h1>List of tests</h1>
+    <h1>Список тестов</h1>
 @stop
 
 @section('content')
     @php
         foreach ($test_name as $value){
-            echo '<a class="btn btn-primary" href="/admin/testing/graphic/'.$value->id.'">'.$value->title.'</a>';
+            echo '<a class="btn btn-primary" href="/admin/testing/graphic/'.$value->id.'/employee=all">'.$value->title.'</a>';
         }
     @endphp
 @stop

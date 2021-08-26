@@ -43,8 +43,9 @@
         }
         echo $last_col;
     @endphp
-    <br>
-    <a class="btn btn-primary" href="/admin/tables/{{ $table_name }}">Back</a>
+    <div class="row button-navigation">
+        <a class="btn btn-secondary" href="/admin/tables/{{ $table_name }}">Назад</a>
+    </div>
 @stop
 
 <style>

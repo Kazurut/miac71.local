@@ -1,17 +1,19 @@
 @extends('adminlte::page')
 
-@section('title', 'List of tests')
-
 @section('content_header')
     @php
         $new_elem = [];
+        $pageTitle;
         foreach ($test_el as $element){
             $new_elem = get_object_vars($element);
             $id = $element->id;
+            $pageTitle = $element->title;
             echo '<h1>' . $element->title . '</h1>';
         }
     @endphp
 @stop
+
+@section('title', $pageTitle )
 
 @section('content')
     <form action='{{ $id }}/preResult/store' method="POST">
@@ -46,10 +48,10 @@
                 }
             }
         @endphp
-        <div class="row">
+        <div class="row button-navigation">
             <div class="col-12">
-                <button type="submit" name="submit" value="save" class="btn btn-primary">Save</button>
-                <a class="btn btn-secondary" href="/admin/testing">Back</a>
+                <button type="submit" name="submit" value="save" class="btn btn-primary">Сохранить</button>
+                <a class="btn btn-secondary" href="/admin/testing">Назад</a>
             </div>
         </div>
     </form>

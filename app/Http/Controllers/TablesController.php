@@ -77,8 +77,8 @@ class TablesController extends Controller
         unset($query['_token']);
 
         if(isset($data['submit']) && $query['submit'] == 'update'){
-            if(isset($query['updated_at']) || $query['updated_at'] == '')
-                $query['updated_at'] = date('m.d.Y');
+            //if(isset($query['updated_at']) || $query['updated_at'] == '' || $query['updated_at'] == 'empty')
+            $query['updated_at'] = date('m.d.Y');
             if(isset($query['id'])) {
                 $id = $query['id'];
                 unset($query['id']);
@@ -115,7 +115,7 @@ class TablesController extends Controller
 
     public function single_table_delete($table_name, $id)
     {
-        DB::table($table_name)->where('id', $id)->delete();
-        return redirect('/admin/tables/'.$table_name.'/');
+        return DB::table($table_name)->where('id', $id)->delete();
+        //return redirect('/admin/tables/'.$table_name.'/');
     }
 }

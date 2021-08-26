@@ -235,7 +235,7 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'List of tables',
+            'text'        => 'Список таблиц',
             'url'         => 'admin/tables',
             //'icon'        => 'far fa-fw fa-file',
             'icon'        => 'fas fa-fw fa-table',
@@ -243,19 +243,19 @@ return [
             'label_color' => 'success',
         ],
         [
-            'text'        => 'Testing',
+            'text'        => 'Тестирование',
             'url'         => '',
             'icon'        => 'fas fa-fw fa-th-list',
             //'label'       => 4,
             'label_color' => 'success',
             'submenu' => [
                 [
-                    'text' => 'List of tests',
+                    'text' => 'Список тестов',
                     'url'  => 'admin/testing',
                     'icon'        => 'far fa-fw fa-clipboard',
                 ],
                 [
-                    'text' => 'Testing result',
+                    'text' => 'Результат тестов',
                     'url'  => 'admin/testing/graphic',
                     'icon'        => 'fas fa-fw fa-poll',
                 ],
